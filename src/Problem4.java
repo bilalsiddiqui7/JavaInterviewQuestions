@@ -14,19 +14,7 @@ public class Problem4 {
 			}
 			if(j==arr1.length)
 				System.out.println(arr2[i]);
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		}		
 		
 	}
 }

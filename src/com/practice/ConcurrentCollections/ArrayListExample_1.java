@@ -58,6 +58,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 //		t1.join();
 //		t2.join();
 //		
+//		System.out.println("------");
+//		
 //		for (String s : list)
 //		{
 //			System.out.println(s);

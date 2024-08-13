@@ -40,11 +40,11 @@ public class ConstructorReference
 
 		// THE ABOVE CODE CAN BE DONE USING CONSTRUCTOR REFERENCE AS GIVEN BELOW
 
-		List<Student> StudentObjectsUsingConstructorRererence = Students
+		List<Student> StudentObjectsUsingConstructorReference = Students
 			.stream().map(Student::new).collect(Collectors.toList());
 		
 		System.out.println("---");
-		StudentObjectsUsingConstructorRererence.forEach(i -> System.out.println(i.getName()));
+		StudentObjectsUsingConstructorReference.forEach(i -> System.out.println(i.getName()));
 
 	}
 }

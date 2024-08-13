@@ -21,13 +21,13 @@ import java.util.Comparator;
 //CompareTo method.
 //
 //A basic differentiating feature is that using comparable we can use only one comparison.
-//Whereas, we can write more than one custom comparators as you want for a given type,
+//Whereas, we can write more than one custom comparators as we want for a given type,
 //all using different interpretations of what sorting means.
 
 //According to definition of functional interface - A functional interface is an interface
 //that contains only one abstract method. But Comparator<T> has two abstract methods:
-//The equals is an abstract method overriding one of the public methods of java.lang.Object,
-//this doesn’t count as an abstract method..A functional interface is an interface that
+//The equals() is an abstract method overriding one of the public methods of java.lang.Object,
+//this doesn’t count as an abstract method.A functional interface is an interface that
 //has just one abstract method (aside from the methods of Object)
 
 
@@ -125,21 +125,27 @@ public class ComparableComparator {
 		employees.add(new Employee(2, "Kiran Amalgonde", 95000));
 		employees.add(new Employee(5, "John", 95000));
 
-		System.out.println("Before sorting-> " + employees);
+		System.out.println("Before sorting-> ");
+		employees.stream().forEach((obj)-> System.out.println(obj));
+		System.out.println("---");
 		
 //		Collections.sort(employees);
-//		System.out.println("After sorting using Comparable-> " + employees);
+//		System.out.println("After sorting using Comparable-> " );
+//		employees.stream().forEach((obj)-> System.out.println(obj));
 
 //		IdSort idSortObj = new IdSort();
 //		Collections.sort(employees, idSortObj);
-//		System.out.println("After sorting using Comparator-> " + employees);
+//		System.out.println("After sorting using Comparator-> ");
+//		employees.stream().forEach((obj)-> System.out.println(obj));
 
-//		NameCompare nameCompareObj = new NameCompare();
-//		Collections.sort(employees, nameCompareObj);
-//		System.out.println("After sorting using Comparator-> " + employees);
+		NameCompare nameCompareObj = new NameCompare();
+		Collections.sort(employees, nameCompareObj);
+		System.out.println("After sorting using Comparator-> ");
+		employees.stream().forEach((obj)-> System.out.println(obj));
 
-		NameLengthCompare nameLengthCompareObj=new NameLengthCompare();
-		Collections.sort(employees, nameLengthCompareObj);
-		System.out.println("After sorting using Comparator-> " + employees);
+//		NameLengthCompare nameLengthCompareObj=new NameLengthCompare();
+//		Collections.sort(employees, nameLengthCompareObj);
+//		System.out.println("After sorting using Comparator-> " + employees);
+//		employees.stream().forEach((obj)-> System.out.println(obj));
 	}
 }

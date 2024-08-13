@@ -1,8 +1,5 @@
 package passByValueRererence;
 
-// THE VALUE OF c1 IS ALSO CHANGED AFTER CHANGING THE VALUE OF c2 BECAUSE c1 AND c2
-// ARE POINTING TO THE SAME ADDRESS
-
 class Car
 {
 	String name;

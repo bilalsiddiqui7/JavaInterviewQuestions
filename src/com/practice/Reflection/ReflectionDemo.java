@@ -15,6 +15,7 @@ public class ReflectionDemo
 
 		System.out.println(obj.getName());
 		System.out.println(obj.getAge());
+		System.out.println("---");
 
 		// PRINTING ALL THE FIELDS IN THE CAT CLASS
 		Field[] catFields = obj.getClass().getDeclaredFields();
@@ -22,6 +23,7 @@ public class ReflectionDemo
 		{
 			System.out.println(f.getName());
 		}
+		System.out.println("---");
 
 		// CHANGING THE FINAL FIELD USING REFLECTION
 		Field[] catFields2 = obj.getClass().getDeclaredFields();
@@ -34,6 +36,7 @@ public class ReflectionDemo
 			}
 		}
 		System.out.println(obj.getName());
+		System.out.println("---");
 
 		// INVOKNG A PRIVATE METHOD USING REFLECTION
 		Method[] catMethods = obj.getClass().getDeclaredMethods();
@@ -45,7 +48,6 @@ public class ReflectionDemo
 				m.setAccessible(true);
 				// WE CAN ALSO PASS NULL IF THE METHOD IS PRIVATE STATIC
 				m.invoke(obj);
-
 			}
 		}
 
